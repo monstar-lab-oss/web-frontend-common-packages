@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "rootDir": "src",
+    "declaration": true,
+    "target": "ES2018",
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ESNext"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"],
+  "references": []
+}
