@@ -1,20 +1,16 @@
 {
   "name": "@monstarlab/react-common",
   "version": "0.0.0",
-  "description": "Common React",
+  "description": "Common React packages",
   "license": "MIT",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "publishConfig": {
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
-  "files": [
-    "**/*"
-  ],
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "prepack": "yarn build && cp package.json dist/"
+    "prepack": "yarn build"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^1.6.2",
