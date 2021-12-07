@@ -1,7 +1,7 @@
-# `@luanvuvt/react-common`
+# `@monstarlab/react-common`
 
 ## Usage
 
 ```
-import { Permission, permissionsReducer, PermissionEnum, setPermissions, usePermissions } from '@montarlab/react-common/permissions';
+import { Permission, permissionsReducer, PermissionEnum, setPermissions, usePermissions } from '@montarlab/react-common';
 ```

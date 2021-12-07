@@ -8,8 +8,9 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "yarn build -w",
-    "build": "rimraf dist && tsc -p .",
+    "start": "yarn build -w",
+    "prebuild": "rimraf dist",
+    "build": "tsc -p .",
     "prepack": "yarn build"
   },
   "dependencies": {
