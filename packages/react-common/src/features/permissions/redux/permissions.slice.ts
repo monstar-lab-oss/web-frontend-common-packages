@@ -19,7 +19,7 @@ const permissionsSlice = createSlice({
     setPermissions: (state, action: PayloadAction<PermissionEnum[]>) => {
       state.permissions = action.payload ?? [];
     },
-    clearPermissions: state => {
+    clearPermissions: (state) => {
       state.permissions = [];
     },
   },

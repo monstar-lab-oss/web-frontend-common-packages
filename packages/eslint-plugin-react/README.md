@@ -4,7 +4,7 @@
 .eslintrc.js
 ```
 module.exports = {
-  extends: ["plugin:@monstarlab/react/all"],
+  extends: ["plugin:@monstarlab/react/app"],
 };
 ```
 

@@ -1,4 +1,1 @@
-// export * from './ExampleComponent'
-
-// Placeholder
-export {}
+export { default as Example } from "./Example";

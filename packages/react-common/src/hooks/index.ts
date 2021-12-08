@@ -1,4 +1,1 @@
-// export * from './useExample'
-
-// Placeholder
-export {}
+export { default as useExample } from "./useExample";

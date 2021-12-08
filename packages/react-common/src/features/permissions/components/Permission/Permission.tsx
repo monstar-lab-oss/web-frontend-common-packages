@@ -1,36 +1,36 @@
-import { memo, ReactNode } from 'react'
+import { memo, ReactNode } from "react";
 
-import { Redirect } from 'react-router-dom'
+import { Redirect } from "react-router-dom";
 
-import { PermissionEnum } from '../../constants/permissions.scopes'
-import usePermissions from '../../hooks/permissions.hooks'
+import { PermissionEnum } from "../../constants/permissions.scopes";
+import usePermissions from "../../hooks/permissions.hooks";
 
 interface PermissionProps {
   /**
    * Wrapped elements to be outputted given the required
    * permissions are met
    */
-  children: ReactNode
+  children: ReactNode;
   /**
    * Element to display in case of required permissions
    * haven't been met
    */
-  fallback?: ReactNode
+  fallback?: ReactNode;
   /**
    * Toggles whether a user must have all of the required
    * permissions, or default is at least one of them
    */
-  hasAll?: boolean
+  hasAll?: boolean;
   /**
    * Where to direct the user, if required permissions
    * aren't met. If no path is supplied, the user will
    * not be redirected.
    */
-  redirectTo?: string
+  redirectTo?: string;
   /**
    * An array of required permissions
    */
-  requiredPermissions: PermissionEnum[]
+  requiredPermissions: PermissionEnum[];
 }
 
 /**
@@ -46,19 +46,19 @@ const Permission = ({
   fallback,
   hasAll,
   redirectTo,
-  requiredPermissions
+  requiredPermissions,
 }: PermissionProps) => {
-  const { hasPermissions } = usePermissions()
-  const allowed = hasPermissions(requiredPermissions, hasAll)
+  const { hasPermissions } = usePermissions();
+  const allowed = hasPermissions(requiredPermissions, hasAll);
 
   /**
    * In case there is more than one child element, we need
    * to wrap the whole thing in a fragment.
    */
-  if (allowed) return <>{children}</>
-  if (redirectTo) return <Redirect to={redirectTo} />
-  if (fallback) return <>{fallback}</>
-  return null
-}
+  if (allowed) return <>{children}</>;
+  if (redirectTo) return <Redirect to={redirectTo} />;
+  if (fallback) return <>{fallback}</>;
+  return null;
+};
 
-export default memo(Permission)
+export default memo(Permission);
