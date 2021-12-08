@@ -1,6 +1,6 @@
 {
   "name": "@luanvuvt/eslint-plugin-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Eslint rules for ML React project",
   "license": "MIT",
   "main": "./dist/index.js",
